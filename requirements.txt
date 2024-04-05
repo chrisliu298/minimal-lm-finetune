@@ -1,0 +1,6 @@
+# If you want to use the latest version of the library, you can install it from the source code.
+# git+https://github.com/huggingface/transformers
+transformers
+accelerate
+deepspeed
+datasets
