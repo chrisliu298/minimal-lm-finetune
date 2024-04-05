@@ -2,6 +2,8 @@
 
 This repository contains a minimal example of fine-tuning autoregressive language models (e.g. Llama 2) on a language modeling task without LoRA. By default, it uses Hugging Face's [`accelerate`](https://huggingface.co/docs/accelerate/en/index) and [DeepSpeed ZeRO-3](https://huggingface.co/docs/transformers/main/en/deepspeed) to fit large models on multiple (two in this case) GPUs.
 
+One benefit of this setup is that the code itself is independent of both the usage of multi-GPU and memory optimization provided by DeepSpeed. This means that you can easily adapt to your own experiments without changing the code itself.
+
 The code has only been tested on a machine with two NVIDIA A100 GPUs. If you have a different setup, you may need to adjust the code accordingly.
 
 ## Configuration
@@ -12,9 +14,9 @@ Make sure to install the required packages by running:
 python -m pip install -r requirements.txt
 ```
 
-The `accelerate_config.yaml` configuration file can also be obtained by running `accelerate config` from the command line. This will start an interactive prompt that will guide you through the process of creating a configuration file.
+There are two configuration files that you need to provide: `accelerate_config.yaml` and `deepspeed_config.json`, which are available in this repository. They are configured in a way that should work out of the box, but you should still check them to make sure they match your setup.
 
-For the DeepSpeed configuration, please refer to the [DeepSpeed documentation](https://www.deepspeed.ai/docs/config-json/) for a comprehensive list of options.
+The `accelerate_config.yaml` configuration file can also be obtained by running `accelerate config` from the command line. This will start an interactive prompt that will guide you through the process of creating a configuration file. For the DeepSpeed configuration, please refer to the [DeepSpeed documentation](https://www.deepspeed.ai/docs/config-json/) for a comprehensive list of options.
 
 ## Usage
 
