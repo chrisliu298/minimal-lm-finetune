@@ -6,11 +6,10 @@ The code has only been tested on a machine with two NVIDIA A100 GPUs. If you hav
 
 ## Configuration
 
-Make sure to use the latest version of `transformers` and install `accelerate` amd `deepspeed` before proceeding.
+Make sure to install the required packages by running:
 
 ```shell
-python -m pip install -U transformers
-python -m pip install accelerate deepspeed
+python -m pip install -r requirements.txt
 ```
 
 The `accelerate_config.yaml` configuration file can also be obtained by running `accelerate config` from the command line. This will start an interactive prompt that will guide you through the process of creating a configuration file.
