@@ -1,6 +1,6 @@
 # A Minimal Example of Fine-Tuning Language Models
 
-This repository contains a minimal example of fine-tuning autoregressive language models (e.g. Llama 2) on a language modeling task without LoRA. By default, it uses Hugging Face's [`accelerate`](https://huggingface.co/docs/accelerate/en/index) and [DeepSpeed ZeRO-3](https://huggingface.co/docs/transformers/main/en/deepspeed) to fine-tune the model on two GPUs.
+This repository contains a minimal example of fine-tuning autoregressive language models (e.g. Llama 2) on a language modeling task without LoRA. By default, it uses Hugging Face's [`accelerate`](https://huggingface.co/docs/accelerate/en/index) and [DeepSpeed ZeRO-3](https://huggingface.co/docs/transformers/main/en/deepspeed) to fit large models on multiple (two in this case) GPUs.
 
 The code has only been tested on a machine with two NVIDIA A100 GPUs. If you have a different setup, you may need to adjust the code accordingly.
 
