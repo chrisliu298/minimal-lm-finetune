@@ -44,7 +44,7 @@ dataset = dataset.map(lambda x: tokenizer(x["text"]), batched=True)
 # ===========================
 #  Define training arguments
 # ===========================
-save_dir = f"{args.model_name}_{args.dataset_name}"
+save_dir = f"{args.model_name.split('/')[1]}_{args.dataset_name}_{args.subset_name}"
 training_args = TrainingArguments(
     output_dir=save_dir,
     overwrite_output_dir=True,
